@@ -16,8 +16,19 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// CORS configuration
+const corsOptions = {
+  origin: [
+    'http://localhost:3000',
+    'https://hot-wings.vercel.app',
+    'https://hot-wings-git-main.vercel.app',
+    /\.hot-wings\.vercel\.app$/
+  ],
+  credentials: true
+};
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

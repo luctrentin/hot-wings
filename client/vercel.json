@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "react",
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "https://hotwings-api.vercel.app/api/$1"
+    }
+  ]
+} 
