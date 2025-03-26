@@ -1,0 +1,22 @@
+{
+  "name": "hotwings",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/dist/index.js",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run build --prefix client && npm run build --prefix server",
+    "seed": "npm run seed --prefix server",
+    "test": "concurrently \"npm test --prefix server\" \"npm test --prefix client\"",
+    "install-all": "npm install && npm install --prefix client && npm install --prefix server"
+  },
+  "keywords": ["food", "ordering", "wings", "restaurant"],
+  "author": "",
+  "license": "ISC",
+  "description": "A food ordering application for a wings restaurant",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

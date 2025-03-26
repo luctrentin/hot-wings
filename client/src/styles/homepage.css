@@ -1,0 +1,210 @@
+/* Hero section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-button {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+}
+
+/* Features section */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background-color: var(--white);
+  padding: 40px 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.feature-description {
+  color: var(--gray-medium);
+}
+
+/* Popular items section */
+.popular-items {
+  margin-top: 30px;
+}
+
+.popular-item {
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.popular-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.popular-item-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.popular-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.popular-item:hover .popular-item-image img {
+  transform: scale(1.1);
+}
+
+.popular-item-content {
+  padding: 20px;
+}
+
+.popular-item-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.popular-item-description {
+  color: var(--gray-medium);
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.popular-item-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+/* App download section */
+.app-download {
+  background-color: var(--gray-light);
+}
+
+.app-download-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.app-download-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.app-download-description {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: var(--gray-medium);
+}
+
+.app-download-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.app-download-button {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.app-download-button:hover {
+  transform: translateY(-5px);
+}
+
+.app-download-button img {
+  height: 50px;
+}
+
+.app-download-image img {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .app-download-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .app-download-image {
+    order: -1;
+    text-align: center;
+  }
+  
+  .app-download-image img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .feature-card {
+    padding: 30px 20px;
+  }
+} 
