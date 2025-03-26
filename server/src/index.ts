@@ -20,9 +20,13 @@ const PORT = process.env.PORT || 5000;
 const corsOptions = {
   origin: [
     'http://localhost:3000',
+    'http://localhost:3001',
     'https://hot-wings.vercel.app',
     'https://hot-wings-git-main.vercel.app',
-    /\.hot-wings\.vercel\.app$/
+    /\.hot-wings\.vercel\.app$/,
+    'https://hot-wings-frontend-4qsov47i4-lucastrentins-projects.vercel.app',
+    'https://hot-wings-frontend-c46wcth6g-lucastrentins-projects.vercel.app',
+    'https://hot-wings-frontend.vercel.app'
   ],
   credentials: true
 };
